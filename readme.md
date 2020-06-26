@@ -3,6 +3,8 @@
 > 1651822 欧明锋
 >
 > 访问：https://omf2333.github.io/ToDoList/TodoList.html
+>
+> Github:https://github.com/omf2333/ToDoList
 
 ## 功能实现
 
@@ -31,9 +33,9 @@
 
 ## Demo展示
 
-<img src="./assets/newTodo.png"  style="zoom:40%;" />  <img src="./assets/edit.png" style="zoom:40%;" />
+<img src="./assets/newTodo.png"  style="zoom:30%;" />  <img src="./assets/edit.png" style="zoom:30%;" />
 
-<img src="./assets/rankDDL.png" style="zoom:40%;" />  <img src="./assets/rankStar.png" style="zoom:40%;" />
+<img src="./assets/rankDDL.png" style="zoom:30%;" />  <img src="./assets/rankStar.png" style="zoom:30%;" />
 
-<img src="./assets/delete.png" style="zoom:40%;" />  <img src="./assets/completed.png" style="zoom:40%;" />
+<img src="./assets/delete.png" style="zoom:30%;" />  <img src="./assets/completed.png" style="zoom:30%;" />
 
