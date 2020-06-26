@@ -31,9 +31,9 @@
 
 ## Demo展示
 
-<img src="assets/newTodo.png"  style="zoom:40%;" />  <img src="assets/edit.png" style="zoom:40%;" />
+<img src="./assets/newTodo.png"  style="zoom:40%;" />  <img src="./assets/edit.png" style="zoom:40%;" />
 
-<img src="assets/rankDDL.png" style="zoom:40%;" />  <img src="assets/rankStar.png" style="zoom:40%;" />
+<img src="./assets/rankDDL.png" style="zoom:40%;" />  <img src="./assets/rankStar.png" style="zoom:40%;" />
 
-<img src="assets/delete.png" style="zoom:40%;" />  <img src="assets/completed.png" style="zoom:40%;" />
+<img src="./assets/delete.png" style="zoom:40%;" />  <img src="./assets/completed.png" style="zoom:40%;" />
 
