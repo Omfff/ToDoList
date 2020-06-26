@@ -1,0 +1,126 @@
+/* 位置固定于底部*/
+.app-footer {
+    position: fixed;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    color: wheat;
+    padding: 10px 3%;
+    height: 30px;
+    /* 为了内部垂直居中 */
+    line-height: 30px;
+    margin: auto;
+    background-color:steelblue;
+    /* 处于上层，防止被遮挡 */
+    z-index: 99;
+}
+
+.filters-tab {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+}
+/* 使得 li 并排 */
+.filters-tab li {
+    display: inline;
+    color: inherit;
+    padding: 3px 7px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    letter-spacing:1.5px
+}
+/* tab被选择中时的样式 */
+.filters-tab .selected {
+    border-color:rgba(245, 222, 179, 0.5);
+    background-color: wheat;
+    color: steelblue;
+}
+
+/* 排序图标 */
+.rank{
+    transform: scale(0.8);
+    opacity: 0.7;
+    float: right;
+    margin: auto;
+    margin-right: 3%;
+}
+
+ /* 垂直镜像翻转 */
+.mirrorRotateVertical {   
+    /* scale不加的话这个样式会无效  */
+    -webkit-transform:rotateX(180deg) scale(0.8); 
+}
+
+#clear-part{
+    float: right;
+    margin: auto;
+}
+
+#clear-text{
+    letter-spacing:1.5px;
+    /* 垂直居中 */
+    vertical-align: middle;
+    color: wheat;
+}
+
+#clear-img{
+    vertical-align: middle;
+    transform: scale(0.8);
+}
+
+#clear-img:disabled{
+    opacity: 0.3;
+}
+
+/* 上拉菜单 */
+.rank-dropup-wrapper{
+    position: absolute;
+    width: 80px;
+    height: auto;
+    bottom: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: rgba(70, 130, 180, 0.5) 1px solid;
+    /* 默认不显示 */
+    display: none;
+    z-index: 9999;
+    animation: fadeio 1s 1;
+    -webkit-animation: fadeio 1s 1;
+    -moz-animation: fadeio 1s 1;
+    -o-animation: fadeio 1s 1;
+}
+
+@keyframes fadeio {
+    /*设置内容由显示变为隐藏*/
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.rank-dropup-wrapper.isShow{
+    display: block;
+}
+
+.rank-menu-item{
+    background-color: steelblue;
+    border-bottom: wheat 1px solid;
+    color:wheat;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+}
+
+.rank-menu-item.active{
+    color: steelblue;
+    background-color: wheat;
+}
+
+

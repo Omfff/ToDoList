@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width" name="viewport"/>
+  <title>ToDoList</title>
+  <meta name="description" content="Omf's ToDoList">
+  <link rel="stylesheet" href="./css/app-header.css">
+  <link rel="stylesheet" href="./css/app-body.css">
+  <link rel="stylesheet" href="./css/app-footer.css">
+  <link rel="stylesheet" href="./css/edit-dialog.css">
+  <script src="model.js"></script>
+  <script src="provider-localStorage.js"></script>
+  <script src="TodoList.js"></script>
+</head>
+
+<body>
+  <div class="todo-app">
+
+    <header class="app-header">
+      <div id="float-wrapper">
+        <div id="title">
+          <h1>ToDoList</h1>
+          <p class="todo-count"></p>
+        </div>
+        <div id = "operation">
+          <input class="complete-all complete-all-unselected" type="checkbox">
+          <image class="op-input" src="./image/closed.svg"/>
+        </div>
+      </div>
+      <div id = "todo-input-div">
+        <input class="add-todo-input" type="text" placeholder="Touch here to input your todo" autofocus>
+        <input class="add-todo-date-input" id="date" type="datetime-local">
+      </div>
+    </header>
+
+    <section class="app-body">
+      <ul class="todo-list">
+
+      </ul>
+    </section>
+
+    <footer class="app-footer">
+      <ul class="filters-tab">
+        <li class="selected">All</li>
+        <li>Active</li>
+        <li>Completed</li>
+      </ul>
+      <div id = "clear-part">
+        <span id="clear-text">All</span>
+        <input id="clear-img" name="clear" type="image" value="clear" src="./image/clear.svg" />
+      </div>
+      <image class="rank" src="./image/sort_wheat.svg"/>
+      <ul class="rank-dropup-wrapper" id="rank-dropup-wrapper">
+        <li class="rank-menu-item">Default</li>
+        <li class="rank-menu-item">By Star</li>
+        <li class="rank-menu-item">By DDL</li>
+      </ul>
+    </footer>
+  </div>
+
+  <div id="edit-todo-wrapper" class="hidden">
+    <div id="edit-todo-dialog">
+        <h2>MODIFY</h2>
+        <label for="edit-label-input">Modify todo label and time here:</label>
+        <input id="edit-label-input" type="text" autofocus>
+        <input id="edit-date-input"  type="datetime-local">
+        <div id="edit-button-area">
+          <button id="ok-edit-button" type="button">Ok</button>
+          <button id="cancel-edit-button" type="button">Cancel</button>
+        </div>
+    </div>
+  </div>
+
+</body>
+</html>

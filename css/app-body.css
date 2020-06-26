@@ -1,0 +1,200 @@
+/* 这样才能保证高度占满全屏 */
+html,body {
+    height: 100%;
+}
+
+body {
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    background: #f5f5f5;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.todo-app {
+    /* margin: 0 0 40px 0; */
+    min-height: 100%;
+    position: relative;
+}
+
+.app-body {
+    position: relative;
+    /* 当手指从触摸屏上移开，会保持一段时间的滚动 */
+    -webkit-overflow-scrolling: touch;
+    z-index: 2;
+    /* 必须大于footer的高度，否则会显示不全 */
+    padding-bottom: 60px;
+    color: #4d4d4d;
+    font-weight: 300;
+}
+
+.todo-list {
+    padding: 0;
+    list-style: none;
+    width: 80%;
+    /* 水平居中 */
+    margin: auto;
+}
+
+.todo-list li {
+    position: relative;
+    font-size: 22px;
+}
+
+.todo-li {
+    height: auto;
+    position: relative;
+    margin: auto;
+    background-color: steelblue;
+    -webkit-transition-duration:-webkit-transform .1s;
+    transition-duration:transform .1s; 
+    -webkit-transition-timing-function:ease-out ;
+    transition-timing-function:ease-out ;
+    border-radius: 10px;
+}
+
+.todo-item{
+    position: relative;
+    background-color: wheat;
+    padding: 8px 5px 5px 5px;
+    margin-top: 8px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 7;
+    /* 添加一个绝对定位父级 */  
+    position: relative;
+    height: 100%;
+}
+
+@-webkit-keyframes add-todo-item
+{
+    from {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        box-sizing: border-box;
+    }
+    to {
+        /* 单行todo项的高度 */
+        height: 56px;
+        box-sizing: border-box; 
+    }
+}
+
+@-webkit-keyframes delete-todo-item
+{
+    from {
+        box-sizing: border-box;
+         /* 单行todo项的高度 */
+        height: 56px;
+        margin-bottom: 0;
+    }
+    to {
+        box-sizing: border-box;
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+.todo-finish {
+    text-align: center;
+    width: 40px;
+    margin: auto 0;
+    height: auto;
+    /* Safari要去除*/
+    border: none; 
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.todo-finish:after {
+    content: url('../image/non-finish.svg');
+    /* 添加绝对定位进行居中 */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.todo-finish:checked:after {
+    content: url('../image/finish.svg')
+}
+
+.todo-content{
+    /* inline-block才能水平排列 */
+    display: inline-block;
+    width: 70%;
+    margin-left: 30x;
+    padding-left: 5px;
+    transition: color 0.4s;
+}
+
+.todo-label{
+    font-size: 22px;
+    line-height: 1.1;
+    word-break: break-all;
+}
+
+li.completed .todo-label {
+    color: steelblue;
+    text-decoration: line-through;
+} 
+
+.todo-time {
+    /* 换行 */
+    display: block;
+    font-size: 10px;
+}
+
+/* 问题：无法垂直居中 */
+.todo-star {
+    position: absolute;
+    width: 40px;
+    /* auto, since non-WebKit browsers doesn't support input styling */
+    height: auto;
+    top: 0;
+    right: 10;
+    bottom: 0;
+    margin: auto 0;
+     /* Safari要去除*/
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.todo-star:after {
+    content: url('../image/non-star.svg'); 
+    /* 垂直居中 */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.todo-star:checked:after {
+    content: url('../image/star.svg');
+}
+
+.todo-back-div {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    text-align: center;
+    background: steelblue;
+    width: 60px; 
+    /* 要隐藏在背后 */
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.todo-back-div img{
+     /* 垂直居中 */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+
