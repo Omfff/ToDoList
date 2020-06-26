@@ -1,5 +1,3 @@
-"use strict";
-
 //来自老师的代码--start
 var $ = function(sel) {
   return document.querySelector(sel);
@@ -101,7 +99,7 @@ function createToDoItem(guid, itemData){
         '</div>',
         '<input class = "todo-star" type = "checkbox">',
       '</div>',
-      '<div class="todo-back-div" style="right:0px;">'+ '<image class="swipe-delete-btn" src="./image/clear.svg"></image>' +'</div>',
+      '<div class="todo-back-div" style="right:0px;">'+ '<img class="swipe-delete-btn" src="./image/clear.svg" alt = "delete btn"></img>' +'</div>',
     '</div>'
   ].join('');
   return item;

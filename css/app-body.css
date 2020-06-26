@@ -47,7 +47,6 @@ body {
     margin: auto;
     background-color: steelblue;
     -webkit-transition-duration:-webkit-transform .1s;
-    transition-duration:transform .1s; 
     -webkit-transition-timing-function:ease-out ;
     transition-timing-function:ease-out ;
     border-radius: 10px;
@@ -126,7 +125,6 @@ body {
     /* inline-block才能水平排列 */
     display: inline-block;
     width: 70%;
-    margin-left: 30x;
     padding-left: 5px;
     transition: color 0.4s;
 }
@@ -155,9 +153,9 @@ li.completed .todo-label {
     /* auto, since non-WebKit browsers doesn't support input styling */
     height: auto;
     top: 0;
-    right: 10;
+    right: 10px;
     bottom: 0;
-    margin: auto 0;
+    margin: auto 0px;
      /* Safari要去除*/
     border: none;
     -webkit-appearance: none;
